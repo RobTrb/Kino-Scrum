@@ -17,7 +17,7 @@ Please check the type of change your PR introduces:
 ## How Has This Been Tested?
 [Describe the tests that you ran to verify your changes]
 
-## Screenshots (if appropriate):
+## Screenshots (if appropriate) :
 [Add screenshots here]
 
 ## Checklist:
