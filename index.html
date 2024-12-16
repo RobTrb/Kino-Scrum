@@ -14,6 +14,68 @@
     <script src="/Script/main.js"></script>
   </head>
   <body>
-    <h1>HEJ</h1>
+    <header class="header">
+      <div class="header__logo">
+        <h1 class="header__logo-title">KINO</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">FILMER</li>
+          <li class="header__nav-item">BARNBIO</li>
+          <li class="header__nav-item">EVENEMANG</li>
+          <li class="header__nav-item">OM OSS</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="search__container">
+        <label class="search__label" for="search">Sök efter film</label>
+        <input
+          class="search__input"
+          type="text"
+          name="search"
+          placeholder="Film..."
+        />
+      </div>
+      <div class="filter-btn__container">
+        <button class="filter-btn__today" type="button">Idag</button>
+        <button class="filter-btn__tomorrow" type="button">Imorgon</button>
+        <button class="filter-btn__other" type="button">Annan dag</button>
+      </div>
+      <div class="film__wrapper">
+        <div class="film">
+          <img class="film__poster" src="" alt="Film Poster" />
+          <h3 class="film__title">Film Title</h3>
+          <p class="film__genre">Film Genre</p>
+        </div>
+        <div class="film">
+          <img class="film__poster" src="" alt="Film Poster" />
+          <h3 class="film__title">Film Title</h3>
+          <p class="film__genre">Film Genre</p>
+        </div>
+        <div class="film">
+          <img class="film__poster" src="" alt="Film Poster" />
+          <h3 class="film__title">Film Title</h3>
+          <p class="film__genre">Film Genre</p>
+        </div>
+      </div>
+      <div class="filter-btn__container">
+        <button class="filter-btn__show-less" type="button">Show Less</button>
+        <button class="filter-btn__show-all" type="button">Show All</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__social">
+        <h3 class="footer__social-title">Sociala Medier</h3>
+        <p class="footer__social-item">Tiktok</p>
+        <p class="footer__social-item">Instagram</p>
+        <p class="footer__social-item">Facebook</p>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__contact-title">Kontakt</h3>
+        <p class="footer__contact-item">Mail</p>
+        <p class="footer__contact-item">Tel</p>
+      </div>
+    </footer>
   </body>
 </html>
