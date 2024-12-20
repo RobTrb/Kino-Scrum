@@ -1,0 +1,36 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/images/backgrounds/background_main.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header,
+main,
+footer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.header__logo {
+  color: #ffff;
+  background-color: #03658c;
+}
+
+.header__nav {
+  color: #ffff;
+  background-color: #012840;
+}
+
+main {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #012840;
+}
