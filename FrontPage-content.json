@@ -1,21 +1,22 @@
 {
   "header": {
-    "logo-title": "KINO",
+    "logoTitle": "KINO",
     "menu": ["FILMER", "BARNBIO", "EVENEMANG", "OM OSS", "LOGGA IN"]
   },
   "main": {
-    "search-label": "Sök efter film",
-    "search-input": "Film...",
-    "filter-btn-today": "Idag",
-    "filter-btn-tomorrow": "Imorgon",
-    "filter-btn-other": "Annan dag",
-    "filter-btn-show-less": "Show Less",
-    "filter-btn-show-all": "Show All"
+    "searchLabel": "Sök efter film",
+    "searchInput": "Film...",
+    "btnToday": "Idag",
+    "btnTomorrow": "Imorgon",
+    "btnOther": "Annan dag",
+    "dropdownGenreAll": "Alla Genre",
+    "btnShowLess": "Show Less",
+    "btnShowAll": "Show All"
   },
   "footer": {
-    "social-title": "Sociala Medier",
-    "kontakt-title": "Kontakt",
-    "find-Us-title": "Hitta till oss",
-    "partners-title": "Våra sammarbetspartner"
+    "socialTitle": "Sociala Medier",
+    "contactTitle": "Kontakt",
+    "findUsTitle": "Hitta till oss",
+    "partnersTitle": "Våra sammarbetspartner"
   }
 }
