@@ -35,4 +35,16 @@ footer {
   background-color: #012840;
 }
 
+@media (min-width: 800px) {
+  body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 799px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
