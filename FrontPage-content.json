@@ -1,0 +1,22 @@
+{
+  "header": {
+    "logoTitle": "KINO",
+    "menu": ["FILMER", "BARNBIO", "EVENEMANG", "OM OSS", "LOGGA IN"]
+  },
+  "main": {
+    "searchLabel": "Sök efter film",
+    "searchInput": "Film...",
+    "btnToday": "Idag",
+    "btnTomorrow": "Imorgon",
+    "btnOther": "Annan dag",
+    "dropdownGenreAll": "Alla Genre",
+    "btnShowLess": "Show Less",
+    "btnShowAll": "Show All"
+  },
+  "footer": {
+    "socialTitle": "Sociala Medier",
+    "contactTitle": "Kontakt",
+    "findUsTitle": "Hitta till oss",
+    "partnersTitle": "Våra sammarbetspartner"
+  }
+}
