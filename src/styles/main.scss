@@ -1,3 +1,5 @@
+@use 'celebration-modal' as cm;
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../assets/images/backgrounds/background_main.webp');
