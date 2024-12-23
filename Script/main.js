@@ -15,7 +15,9 @@ async function loadFrontPageContent() {
     console.log(frontPageImages)
 
     //IMAGES
-    document.querySelector('.background-image').setAttribute('src', frontPageImages.backgroundImage)
+    const imageUrl = frontPageImages.backgroundImage
+    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${imageUrl})`
 
     //HEADER
     document.querySelector('.header__logo-title').innerHTML = frontPageContent.header.logoTitle
