@@ -55,3 +55,14 @@ async function loadFrontPageContent() {
     document.querySelector('footer').style.display = 'none'
   }
 }
+
+// Clear search field button
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.querySelector('.search__input')
+  const clearButton = document.querySelector('.search__clear')
+
+  clearButton.addEventListener('click', function () {
+    searchInput.value = ''
+    searchInput.focus()
+  })
+})
