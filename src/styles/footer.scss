@@ -1,0 +1,85 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  &__social-twitter {
+    display: inline-block;
+    width: 30px; // Default icon size
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Ensure no distortion
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+
+      &:hover {
+        transform: scale(1.1); // Scale icon on hover
+        opacity: 0.8; // Fade effect on hover
+      }
+    }
+  }
+
+  &__social-instagram {
+    display: inline-block;
+    width: 30px; // Default icon size
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Ensure no distortion
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+
+      &:hover {
+        transform: scale(1.1); // Scale icon on hover
+        opacity: 0.8; // Fade effect on hover
+      }
+    }
+  }
+
+  &__social-youtube {
+    display: inline-block;
+    width: 30px; // Default icon size
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Ensure no distortion
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+
+      &:hover {
+        transform: scale(1.1); // Scale icon on hover
+        opacity: 0.8; // Fade effect on hover
+      }
+    }
+  }
+
+  &__social-linkedin {
+    display: inline-block;
+    width: 30px; // Default icon size
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Ensure no distortion
+      transition:
+        transform 0.3s,
+        opacity 0.3s;
+
+      &:hover {
+        transform: scale(1.1); // Scale icon on hover
+        opacity: 0.8; // Fade effect on hover
+      }
+    }
+  }
+}
