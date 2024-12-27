@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     title: 'Firandet av Sápmi - 6:e Februari',
     description: 'Tillsammans firar vi Samernas nationaldag på Kino KvikkJokk!',
     details:
-      'Kom och njut av Farmor Joavnnas populära tunnbröd GÁHKKU. Utöver extraordinära filmvisningar erbjuds även våra traditionella aktiviteter. Däribland:',
+      'Kom och njut av Farmor Joavnnas populära tunnbröd GÁHKKU. Utöver extraordinära filmvisningar erbjuds även våra traditionella aktiviteter',
     activities: [
       'Knep & knåp för små',
       'Ráidu – Möte med renar',
