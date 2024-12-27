@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const modalData = {
-    title: 'Firandet av Sápmi - 6:e Februari',
-    description: 'Tillsammans firar vi Samernas nationaldag på Kino KvikkJokk!',
+    title: 'Firande av Sápmi 6/2',
+    description: 'Tillsammans firar vi Samernas Nationaldag på Kino Kvikkjokk!',
     details:
-      'Kom och njut av Farmor Joavnnas populära tunnbröd GÁHKKU. Utöver extraordinära filmvisningar erbjuds även våra traditionella aktiviteter',
+      'Välkommen att njuta av Farmor Joavnnas populära tunnbröd GÁHKKU. Utöver extraordinära filmvisningar erbjuds även våra traditionella aktiviteter',
     activities: [
       'Knep & knåp för små',
       'Ráidu – Möte med renar',
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
      <div class="celebration-modal_content">
         <h1>${data.title}</h1>
         <h2>${data.description}</h2>
-        <p>${data.details}"</p>
+        <p>${data.details}</p>
         <ul class="celebration-modal_activities">
             ${data.activities.map((activity) => `<li>${activity}</li>`).join('')}
             </ul>
