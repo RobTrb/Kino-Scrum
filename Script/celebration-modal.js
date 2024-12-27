@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       'Knep & knåp för små',
       'Ráidu – Möte med renar',
       'Samisk filmhistoria',
-      'Bokförsäljning och signering: Maxida Märaks memoarer',
       'Jon Henrik Fjällgren lyfter taket i stora salen med Samisk Joik kl:17',
     ],
   }
