@@ -43,7 +43,7 @@
 }
 
 .close-modal_btn::before {
-  content: "×";
+  content: '×';
   font-size: 30px;
   color: #e30000;
 }
@@ -65,7 +65,6 @@
   }
 }
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/backgrounds/background_main.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
