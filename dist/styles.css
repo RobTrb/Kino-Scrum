@@ -74,9 +74,76 @@
     overflow-x: auto;
   }
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.footer__social-twitter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.footer__social-twitter img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.footer__social-twitter img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.footer__social-instagram {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.footer__social-instagram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.footer__social-instagram img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.footer__social-youtube {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.footer__social-youtube img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.footer__social-youtube img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.footer__social-linkedin {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.footer__social-linkedin img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.footer__social-linkedin img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
 body {
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 header,

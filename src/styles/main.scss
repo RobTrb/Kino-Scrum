@@ -1,8 +1,10 @@
 @use 'celebration-modal' as cm;
+@use 'footer.scss';
 
 body {
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 header,
