@@ -6,6 +6,7 @@
   "main": {
     "searchLabel": "Sök efter film",
     "searchInput": "Film...",
+    "searchClear": "&#x2715;",
     "btnToday": "Idag",
     "btnTomorrow": "Imorgon",
     "btnOther": "Annan dag",

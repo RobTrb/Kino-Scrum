@@ -29,6 +29,7 @@ async function loadFrontPageContent() {
     //MAIN
     document.querySelector('.search__label').innerHTML = frontPageContent.main.searchLabel
     document.querySelector('.search__input').setAttribute('placeholder', frontPageContent.main.searchInput)
+    document.querySelector('.search__clear').innerHTML = frontPageContent.main.searchClear
     document.querySelector('.filter-btn__today').innerHTML = frontPageContent.main.btnToday
     document.querySelector('.filter-btn__tomorrow').innerHTML = frontPageContent.main.btnTomorrow
     document.querySelector('.filter-btn__other').innerHTML = frontPageContent.main.btnOther
@@ -54,3 +55,14 @@ async function loadFrontPageContent() {
     document.querySelector('footer').style.display = 'none'
   }
 }
+
+// Clear search field button
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.querySelector('.search__input')
+  const clearButton = document.querySelector('.search__clear')
+
+  clearButton.addEventListener('click', function () {
+    searchInput.value = ''
+    searchInput.focus()
+  })
+})

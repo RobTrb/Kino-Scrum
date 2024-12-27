@@ -48,3 +48,45 @@ footer {
     padding: 0.5rem;
   }
 }
+
+.search__container {
+  // Styling for search container
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  .search__label {
+    padding-bottom: 0.4rem;
+  }
+
+  .search__input {
+    border-radius: 22px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 50%;
+    border-color: lightgray;
+    border-style: solid;
+  }
+
+  .search__clear {
+    position: absolute;
+    margin-left: 13.3rem;
+    margin-top: 2rem;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+  }
+}
