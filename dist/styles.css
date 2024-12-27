@@ -72,6 +72,33 @@
   opacity: 0.8;
 }
 
+.header__logo {
+  color: white;
+  background-color: #03658c;
+  padding: 0px 20px 0px 20px;
+  min-width: 800px;
+  align-self: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav {
+  color: white;
+  background-color: #012840;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header {
+  padding: 0px 20px 0px 20px;
+  background-color: #012840;
+}
+
 body {
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,16 +113,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   max-width: 800px;
-}
-
-.header__logo {
-  color: white;
-  background-color: #03658c;
-}
-
-.header__nav {
-  color: white;
-  background-color: #012840;
 }
 
 main {
