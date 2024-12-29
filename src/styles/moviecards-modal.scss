@@ -1,17 +1,35 @@
 //this is styling for the movie card modals that appear when clicking a movie.
 
-.movicards-modal__rootcontainer {
+.movie-cards__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem;
 }
 
-.movie-cards__rootcontainer .movie-card {
+.movie-card {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.movie-details__container {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
 }
