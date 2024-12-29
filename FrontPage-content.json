@@ -1,11 +1,12 @@
 {
   "header": {
-    "logoTitle": "KINO",
+    "logoTitle": "Kvikkjokk Kino",
     "menu": ["FILMER", "BARNBIO", "EVENEMANG", "OM OSS", "LOGGA IN"]
   },
   "main": {
     "searchLabel": "Sök efter film",
     "searchInput": "Film...",
+    "searchClear": "&#x2715;",
     "btnToday": "Idag",
     "btnTomorrow": "Imorgon",
     "btnOther": "Annan dag",
