@@ -17,7 +17,14 @@
   "footer": {
     "socialTitle": "Sociala Medier",
     "contactTitle": "Kontakt",
+    "contactInfo": "Kvikkjokk Bio AB",
+    "contactNumber": "+46 (0)971-123 456",
+    "contactMail1": "info@kvikkjokkbio.se",
+    "contactMail2": "bokning@kvikkjokkbio.se",
     "findUsTitle": "Hitta till oss",
+    "findUsStreetName": "Fjällvägen 12",
+    "findUsPostalCode": "96202 Kvikkjokk",
+    "findUsCountry": "Sverige",
     "partnersTitle": "Våra sammarbetspartner"
   }
 }
