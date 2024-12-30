@@ -1,6 +1,7 @@
 //Fetch FrontPage Content
 
 loadFrontPageContent()
+addFrontPageContent()
 
 async function loadFrontPageContent() {
   try {
@@ -19,29 +20,7 @@ async function loadFrontPageContent() {
     document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${imageUrl})`
 
-    //HEADER
-    document.querySelector('.header__logo-title').innerHTML = frontPageContent.header.logoTitle
-    const navItems = document.querySelectorAll('.header__nav-item')
-    for (let i = 0; i < navItems.length; i++) {
-      navItems[i].innerHTML = frontPageContent.header.menu[i]
-    }
-
-    //MAIN
-    document.querySelector('.search__label').innerHTML = frontPageContent.main.searchLabel
-    document.querySelector('.search__input').setAttribute('placeholder', frontPageContent.main.searchInput)
-    document.querySelector('.search__clear').innerHTML = frontPageContent.main.searchClear
-    document.querySelector('.filter-btn__today').innerHTML = frontPageContent.main.btnToday
-    document.querySelector('.filter-btn__tomorrow').innerHTML = frontPageContent.main.btnTomorrow
-    document.querySelector('.filter-btn__other').innerHTML = frontPageContent.main.btnOther
-    document.querySelector('.filter-genre__dropdown-all').innerHTML = frontPageContent.main.dropdownGenreAll
-    document.querySelector('.filter-btn__show-less').innerHTML = frontPageContent.main.btnShowLess
-    document.querySelector('.filter-btn__show-all').innerHTML = frontPageContent.main.btnShowAll
-
-    //FOOTER
-    document.querySelector('.footer__social-title').innerHTML = frontPageContent.footer.socialTitle
-    document.querySelector('.footer__contact-title').innerHTML = frontPageContent.footer.contactTitle
-    document.querySelector('.footer__find-Us-title').innerHTML = frontPageContent.footer.findUsTitle
-    document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
+    return frontPageContent
   } catch (error) {
     console.error('Error loading front page content:', error)
 
@@ -54,6 +33,34 @@ async function loadFrontPageContent() {
     document.querySelector('main').style.display = 'none'
     document.querySelector('footer').style.display = 'none'
   }
+}
+
+async function addFrontPageContent() {
+  const frontPageContent = await loadFrontPageContent()
+
+  //HEADER
+  document.querySelector('.header__logo-title').innerHTML = frontPageContent.header.logoTitle
+  const navItems = document.querySelectorAll('.header__nav-item')
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].innerHTML = frontPageContent.header.menu[i]
+  }
+
+  //MAIN
+  document.querySelector('.search__label').innerHTML = frontPageContent.main.searchLabel
+  document.querySelector('.search__input').setAttribute('placeholder', frontPageContent.main.searchInput)
+  document.querySelector('.search__clear').innerHTML = frontPageContent.main.searchClear
+  document.querySelector('.filter-btn__today').innerHTML = frontPageContent.main.btnToday
+  document.querySelector('.filter-btn__tomorrow').innerHTML = frontPageContent.main.btnTomorrow
+  document.querySelector('.filter-btn__other').innerHTML = frontPageContent.main.btnOther
+  document.querySelector('.filter-genre__dropdown-all').innerHTML = frontPageContent.main.dropdownGenreAll
+  document.querySelector('.filter-btn__show-less').innerHTML = frontPageContent.main.btnShowLess
+  document.querySelector('.filter-btn__show-all').innerHTML = frontPageContent.main.btnShowAll
+
+  //FOOTER
+  document.querySelector('.footer__social-title').innerHTML = frontPageContent.footer.socialTitle
+  document.querySelector('.footer__contact-title').innerHTML = frontPageContent.footer.contactTitle
+  document.querySelector('.footer__find-Us-title').innerHTML = frontPageContent.footer.findUsTitle
+  document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
 }
 
 // Clear search field button

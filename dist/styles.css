@@ -188,6 +188,34 @@ h2 {
   transform: scale(1.1);
   opacity: 0.8;
 }
+.footer__contact-info {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__contact-number {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__contact-mail1 {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__contact-mail2 {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__find-Us-streetname {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__find-Us-postalcode {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.footer__find-Us-country {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
 
 .header__logo {
   color: white;

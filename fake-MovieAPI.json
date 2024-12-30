@@ -8,7 +8,7 @@
       "runtime": "120 min",
       "startDate": "2024-12-22",
       "endDate": "2025-01-05",
-      "imagePoster": "https://example.com/posters/dark_horizon.jpg",
+      "imagePoster": "assets/images/movie-posters/The dark horizon.jpeg",
       "description": "En detektiv slår sig ihop med en hacker för att avslöja en konspiration som kan förändra världen.",
       "ageLimit": "18+",
       "rating": 7.8
@@ -21,7 +21,7 @@
       "runtime": "140 min",
       "startDate": "2024-12-24",
       "endDate": "2025-01-08",
-      "imagePoster": "https://example.com/posters/fantasy_quest.jpg",
+      "imagePoster": "assets/images/movie-posters/Fantasy Quest.jpeg",
       "description": "En ung hjälte ger sig ut på en episk resa för att rädda ett mystiskt land från en gammal ondska.",
       "ageLimit": "PG-13",
       "rating": 8.5
@@ -34,7 +34,7 @@
       "runtime": "155 min",
       "startDate": "2024-12-26",
       "endDate": "2025-01-09",
-      "imagePoster": "https://example.com/posters/last_stand.jpg",
+      "imagePoster": "assets/images/movie-posters/The Last Stand.jpeg",
       "description": "En grupp soldater måste försvara en stad mot en skoningslös armé i en livsfarlig strid för överlevnad.",
       "ageLimit": "R",
       "rating": 7.2
@@ -47,7 +47,7 @@
       "runtime": "110 min",
       "startDate": "2024-12-28",
       "endDate": "2025-01-10",
-      "imagePoster": "https://example.com/posters/love_in_rain.jpg",
+      "imagePoster": "assets/images/movie-posters/Love in the rain.jpeg",
       "description": "En hjärtevärmande kärlekshistoria som utspelar sig i en liten kuststad under regnperioden.",
       "ageLimit": "PG",
       "rating": 8.0
@@ -60,7 +60,7 @@
       "runtime": "130 min",
       "startDate": "2024-12-30",
       "endDate": "2025-01-12",
-      "imagePoster": "https://example.com/posters/into_the_wild.jpg",
+      "imagePoster": "assets/images/movie-posters/Into the wild.jpeg",
       "description": "En grupp vänner ger sig ut på ett äventyr genom vildmarken för att hitta en gammal skatt.",
       "ageLimit": "PG-13",
       "rating": 7.6
@@ -73,7 +73,7 @@
       "runtime": "145 min",
       "startDate": "2025-01-01",
       "endDate": "2025-01-13",
-      "imagePoster": "https://example.com/posters/silent_witness.jpg",
+      "imagePoster": "assets/images/movie-posters/The silent witness.jpeg",
       "description": "En briljant advokat utreder ett högprofilerat mordfall som leder henne till en skrämmande sanning.",
       "ageLimit": "R",
       "rating": 7.9
@@ -86,7 +86,7 @@
       "runtime": "160 min",
       "startDate": "2025-01-02",
       "endDate": "2025-01-14",
-      "imagePoster": "https://example.com/posters/space_odyssey.jpg",
+      "imagePoster": "assets/images/movie-posters/Space Odyssey.jpeg",
       "description": "En besättning av astronauter ger sig ut i rymden för att upptäcka en utomjordisk civilisation bortom stjärnorna.",
       "ageLimit": "PG-13",
       "rating": 8.3
@@ -99,7 +99,7 @@
       "runtime": "125 min",
       "startDate": "2025-01-05",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/winter_soldier.jpg",
+      "imagePoster": "assets/images/movie-posters/The Winter Soldier.jpeg",
       "description": "En före detta soldat måste komma ur pensionen för att stoppa ett farligt nytt vapen från att förstöra världen.",
       "ageLimit": "PG-13",
       "rating": 7.7
@@ -112,7 +112,7 @@
       "runtime": "105 min",
       "startDate": "2025-01-07",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/ghosts_past.jpg",
+      "imagePoster": "assets/images/movie-posters/Ghosts of the past.jpeg",
       "description": "En ung kvinna avslöjar mörka hemligheter från sin familjs förflutna samtidigt som hon hemsöks av oförklarliga fenomen.",
       "ageLimit": "R",
       "rating": 6.9
@@ -125,7 +125,7 @@
       "runtime": "95 min",
       "startDate": "2025-01-08",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/midnight_run.jpg",
+      "imagePoster": "assets/images/movie-posters/Midnight run.jpeg",
       "description": "Två osannolika vänner ger sig ut på en resa över hela landet fylld med oväntade äventyr och skratt.",
       "ageLimit": "PG-13",
       "rating": 7.3
@@ -138,7 +138,7 @@
       "runtime": "150 min",
       "startDate": "2025-01-09",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/kingdom_fallen.jpg",
+      "imagePoster": "assets/images/movie-posters/Kingdom of the fallen.jpeg",
       "description": "En prins måste ena krigande fraktioner för att försvara sitt rike mot en gammal fiende.",
       "ageLimit": "PG-13",
       "rating": 8.0
@@ -151,7 +151,7 @@
       "runtime": "125 min",
       "startDate": "2025-01-10",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/eclipse.jpg",
+      "imagePoster": "assets/images/movie-posters/Eclipse.jpeg",
       "description": "En man kämpar med sitt förflutna medan han blir indragen i ett farligt nät av konspirationer.",
       "ageLimit": "R",
       "rating": 7.5
@@ -164,7 +164,7 @@
       "runtime": "140 min",
       "startDate": "2025-01-02",
       "endDate": "2025-01-13",
-      "imagePoster": "https://example.com/posters/time_travelers_secret.jpg",
+      "imagePoster": "assets/images/movie-posters/The Time Traveler's Secret.jpeg",
       "description": "En forskare upptäcker av misstag tidsresor och ger sig ut på en resa för att förändra historien.",
       "ageLimit": "PG-13",
       "rating": 8.1
@@ -177,7 +177,7 @@
       "runtime": "130 min",
       "startDate": "2025-01-03",
       "endDate": "2025-01-14",
-      "imagePoster": "https://example.com/posters/reckoning.jpg",
+      "imagePoster": "assets/images/movie-posters/The Reckoning.jpeg",
       "description": "En hemlig agent och hans team måste stoppa en global terroristorganisation från att sprida förödelse.",
       "ageLimit": "R",
       "rating": 7.4
@@ -190,7 +190,7 @@
       "runtime": "110 min",
       "startDate": "2025-01-04",
       "endDate": "2025-01-13",
-      "imagePoster": "https://example.com/posters/whispers_dark.jpg",
+      "imagePoster": "assets/images/movie-posters/Whispers in the Dark.jpeg",
       "description": "När mystiska ljud hörs i ett gammalt hus börjar en kvinna att undersöka de mörka hemligheterna bakom det förflutna.",
       "ageLimit": "R",
       "rating": 6.8
@@ -203,7 +203,7 @@
       "runtime": "125 min",
       "startDate": "2025-01-06",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/maze.jpg",
+      "imagePoster": "assets/images/movie-posters/The Maze.jpeg",
       "description": "En grupp människor måste navigera genom en farlig labyrint för att överleva och avslöja en hemlig organisation.",
       "ageLimit": "PG-13",
       "rating": 7.6
@@ -216,7 +216,7 @@
       "runtime": "145 min",
       "startDate": "2025-01-08",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/beyond_horizon.jpg",
+      "imagePoster": "assets/images/movie-posters/Beyond the Horizon.jpeg",
       "description": "En grupp upptäcktsresande ger sig ut för att hitta en ny värld bortom horisonten.",
       "ageLimit": "PG",
       "rating": 8.2
@@ -229,7 +229,7 @@
       "runtime": "135 min",
       "startDate": "2025-01-09",
       "endDate": "2025-01-14",
-      "imagePoster": "https://example.com/posters/tides_destiny.jpg",
+      "imagePoster": "assets/images/movie-posters/Tides of Destiny.jpeg",
       "description": "I en värld där havet styr människornas öden måste en ung kvinna stå upp för sitt rike.",
       "ageLimit": "PG-13",
       "rating": 7.8
@@ -242,7 +242,7 @@
       "runtime": "125 min",
       "startDate": "2025-01-10",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/dark_reflection.jpg",
+      "imagePoster": "assets/images/movie-posters/Dark Reflection.jpeg",
       "description": "En kvinna får reda på en mörk hemlighet om sin familj och måste konfrontera sina rädslor.",
       "ageLimit": "R",
       "rating": 7.9
@@ -255,7 +255,7 @@
       "runtime": "140 min",
       "startDate": "2025-01-12",
       "endDate": "2025-01-15",
-      "imagePoster": "https://example.com/posters/journey_time.jpg",
+      "imagePoster": "assets/images/movie-posters/Journey Through Time.jpeg",
       "description": "Tre tidsresenärer måste stoppa en katastrof genom att resa mellan historiska epoker och förändra framtiden.",
       "ageLimit": "PG-13",
       "rating": 8.4
