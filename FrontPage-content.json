@@ -30,5 +30,20 @@
   },
   "error": {
     "loadMovies": "Förlåt, kunde inte ladda filmerna. Försök igen senare!"
+  },
+  "dateFilter": {
+    "dateTitle": "Välj Datum",
+    "month1": "Jan",
+    "month2": "Feb",
+    "month3": "Mars",
+    "month4": "April",
+    "month5": "Maj",
+    "month6": "Juni",
+    "month7": "Juli",
+    "month8": "Aug",
+    "month9": "Sep",
+    "month10": "Oct",
+    "month11": "Nov",
+    "month12": "Dec"
   }
 }

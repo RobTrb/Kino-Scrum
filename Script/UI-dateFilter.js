@@ -37,7 +37,9 @@ function generateDateList() {
   return dateList
 }
 
-function updateDateFilter() {
+async function updateDateFilter() {
+  const frontPageContent = await loadFrontPageContent()
+
   const dateFilterList = document.querySelector('.date-filter__list')
   const dateList = generateDateList()
 
@@ -46,7 +48,7 @@ function updateDateFilter() {
   dateList.forEach((date) => {
     const dateBtn = document.createElement('button')
     dateBtn.classList.add('date__btn')
-    const updatedDate = getOnlyDate(date)
+    const updatedDate = getOnlyDate(date, frontPageContent)
     dateBtn.innerHTML = updatedDate
     dateFilterList.appendChild(dateBtn)
 
@@ -75,46 +77,46 @@ function updateDateFilter() {
   })
 }
 
-function getOnlyDate(date) {
+function getOnlyDate(date, frontPageContent) {
   let theDay = date.slice(-2)
   let theMonth = date.slice(5, 7)
   let theMonthLetters = ''
 
   if (theMonth == '01') {
-    theMonthLetters = 'Jan'
+    theMonthLetters = frontPageContent.dateFilter.month1
   }
   if (theMonth == '02') {
-    theMonthLetters = 'Feb'
+    theMonthLetters = frontPageContent.dateFilter.month2
   }
   if (theMonth == '03') {
-    theMonthLetters = 'Mars'
+    theMonthLetters = frontPageContent.dateFilter.month3
   }
   if (theMonth == '04') {
-    theMonthLetters = 'April'
+    theMonthLetters = frontPageContent.dateFilter.month4
   }
   if (theMonth == '05') {
-    theMonthLetters = 'Maj'
+    theMonthLetters = frontPageContent.dateFilter.month5
   }
   if (theMonth == '06') {
-    theMonthLetters = 'Juni'
+    theMonthLetters = frontPageContent.dateFilter.month6
   }
   if (theMonth == '07') {
-    theMonthLetters = 'Juli'
+    theMonthLetters = frontPageContent.dateFilter.month7
   }
   if (theMonth == '08') {
-    theMonthLetters = 'Aug'
+    theMonthLetters = frontPageContent.dateFilter.month8
   }
   if (theMonth == '09') {
-    theMonthLetters = 'Sep'
+    theMonthLetters = frontPageContent.dateFilter.month9
   }
   if (theMonth == '10') {
-    theMonthLetters = 'Okt'
+    theMonthLetters = frontPageContent.dateFilter.month10
   }
   if (theMonth == '11s') {
-    theMonthLetters = 'Nov'
+    theMonthLetters = frontPageContent.dateFilter.month11
   }
   if (theMonth == '12') {
-    theMonthLetters = 'Dec'
+    theMonthLetters = frontPageContent.dateFilter.month12
   }
 
   return `${theDay} ${theMonthLetters}`
@@ -123,7 +125,7 @@ function getOnlyDate(date) {
 updateDateFilter()
 setInterval(updateDateFilter, 24 * 60 * 60 * 1000)
 
-document.querySelector('.filter-btn--other').addEventListener('click', () => {
+document.querySelector('.filter-btn--other').addEventListener('click', async () => {
   todayBtn.classList.remove('date-activated')
   tomorrowBtn.classList.remove('date-activated')
   document.querySelector('.date-filter__wrapper').classList.toggle('display')
@@ -133,7 +135,8 @@ document.querySelector('.filter-btn--other').addEventListener('click', () => {
   if (!existingCloseBtn) {
     const dateTitle = document.createElement('h3')
     dateTitle.classList.add('date__title')
-    dateTitle.innerHTML = 'Välj Datum'
+    const frontPageContent = await loadFrontPageContent()
+    dateTitle.innerHTML = frontPageContent.dateFilter.dateTitle
     dateBtn.insertBefore(dateTitle, dateBtn.children[0])
 
     const closeBtn = document.createElement('span')
