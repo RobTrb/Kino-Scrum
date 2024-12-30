@@ -1,6 +1,7 @@
 //this is styling for the movie card modals that appear when clicking a movie.
 
-.movie-cards__container {
+.modal {
+  background-color: orange;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;

@@ -5,18 +5,22 @@ function generateMovieCards() {
 
   fetch('fake-MovieAPI.json') //Fetching json resource
     .then((response) => response.json()) //Makin json resource a js object
-    .then((movies) => {
+    .then((data) => {
+      console.log(data) //Vad får jag tbx?
+      const movies = data.movies //om movies är en del av svaret
+
       movies.forEach((movie) => {
         //looping through each movie
-        const card = document.createElement('div') //Creating a moviecard for every movie
-        card.classList.add('movie-card') //Assigning a class to the card
-        card.dataset.movieId = movie.id //Movie ID is set as the data attribute
-        card.innerHTML = `<img src="${movie.image}" alt="${movie.title}" />
+        const movieCard = document.createElement('div') //Creating a moviecard for every movie
+        movieCard.classList.add('movie-card') //Assigning a class to the card
+        movieCard.innerHTML = `<img src="${movie.imagePoster}" alt="${movie.title}" />
                     <h3>${movie.title}</h3>`
 
-        card.addEventListener('click', () => displayMovieDetails(movie))
+        movieCard.addEventListener('click', () => {
+          displayMovieDetails(movie)
+        })
 
-        movieContainer.appendChild(card) //Adding the card to the container
+        movieContainer.appendChild(movieCard) //Adding the card to the container
       })
     })
     .catch((error) => console.error('Error fetching movie information:', error)) //Error handling
@@ -30,6 +34,15 @@ function displayMovieDetails(movie) {
   document.querySelector('.movie-details__runtime').innerText = `Runtime: ${movie.runtime}`
   document.querySelector('.movie-details__description').innerText = movie.description
   document.querySelector('.movie-details__genres').innerText = `Genres: ${movie.genres.join(', ')}`
+
+  const modal = document.querySelector('.movie-modal')
+  modal.classList.add('open') //Adding class to modal
 }
+
+// closing modal
+document.querySelector('.movie-modal__close').addEventListener('click', () => {
+  const modal = document.querySelector('.movie-modal')
+  modal.classList.remove('open') // Stänger modalen
+})
 
 generateMovieCards() //calling the function to show moviecards

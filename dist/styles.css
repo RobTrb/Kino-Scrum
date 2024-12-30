@@ -39,7 +39,7 @@
   font-size: small;
 }
 
-p {
+.celebration-modal_content p {
   background-color: #cbcdcd;
   margin-top: 2em;
   padding: 0.2em;
@@ -47,7 +47,7 @@ p {
   border-radius: 0.4rem;
 }
 
-h2 {
+.celebration-modal_content h2 {
   font-family: "Great Vibes", cursive;
   font-size: 1.2rem;
   min-width: 8rem;

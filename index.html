@@ -41,13 +41,16 @@
       </div>
 
       <div class="movie-cards__container"><!--This is only a placeholder for modal--></div>
-      <div class="movie-details">
-        <img class="movie-details__image" />
-        <h2 class="movie-details__title"></h2>
-        <p class="movie-details__id"></p>
-        <p class="movie-details__runtime"></p>
-        <p class="movie-details__description"></p>
-        <p class="movie-details__genres"></p>
+      <div class="movie-modal">
+        <div class="movie-modal__content">
+          <span class="movie-modal__close">X</span>
+          <img class="movie-details__image" src="imagePoster" alt="Movie Poster" />
+          <h2 class="movie-details__title"></h2>
+          <p class="movie-details__id"></p>
+          <p class="movie-details__runtime"></p>
+          <p class="movie-details__description"></p>
+          <p class="movie-details__genres"></p>
+        </div>
       </div>
 
       <div class="movie__wrapper"></div>
@@ -93,8 +96,9 @@
       </div>
     </footer>
     <script src="/Script/main.js"></script>
-    <script src="Script/fetch.js"></script>
+    <script src="/Script/fetch.js"></script>
     <script src="/Script/celebration-modal.js"></script>
-    <script src="Script/UI-movies.js"></script>
+    <script src="/Script/UI-movies.js"></script>
+    <script src="/Script/moviecards-modal.js"></script>
   </body>
 </html>
