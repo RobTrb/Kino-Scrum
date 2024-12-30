@@ -26,5 +26,8 @@
     "findUsPostalCode": "96202 Kvikkjokk",
     "findUsCountry": "Sverige",
     "partnersTitle": "Våra sammarbetspartner"
+  },
+  "error": {
+    "loadMovies": "Förlåt, kunde inte ladda filmerna. Försök igen senare!"
   }
 }
