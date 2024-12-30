@@ -1,0 +1,177 @@
+//FILTER BUTTONS MOBILE
+
+const moreFiltersBtn = document.querySelector('.mobile__filter-menu')
+const filterBtnContainer = document.querySelector('.filter-btn__container')
+
+moreFiltersBtn.addEventListener('click', () => {
+  filterBtnContainer.style.display = 'flex'
+  const closeBtn = document.createElement('span')
+  closeBtn.classList.add('filter-btn__close-btn')
+  closeBtn.innerHTML = '\u00d7'
+  filterBtnContainer.insertBefore(closeBtn, filterBtnContainer.children[0])
+  closeBtn.addEventListener('click', () => {
+    filterBtnContainer.style.display = 'none'
+    closeBtn.remove()
+  })
+})
+
+//DATE POPUP
+
+function formatDate(date) {
+  let day = date.getDate()
+  let month = date.getMonth() + 1
+  let year = date.getFullYear()
+  return `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`
+}
+
+function generateDateList() {
+  const today = new Date()
+  const dateList = []
+
+  for (let i = 0; i <= 13; i++) {
+    const futureDate = new Date(today)
+    futureDate.setDate(today.getDate() + i)
+    dateList.push(formatDate(futureDate))
+  }
+
+  return dateList
+}
+
+function updateDateFilter() {
+  const dateFilterList = document.querySelector('.date-filter__list')
+  const dateList = generateDateList()
+
+  dateFilterList.innerHTML = ''
+
+  dateList.forEach((date) => {
+    const dateBtn = document.createElement('button')
+    dateBtn.classList.add('date__btn')
+    const updatedDate = getOnlyDate(date)
+    dateBtn.innerHTML = updatedDate
+    dateFilterList.appendChild(dateBtn)
+
+    dateBtn.addEventListener('click', () => {
+      if (window.innerWidth <= 800) {
+        document.querySelector('.filter-btn__close-btn').click()
+      }
+
+      const allDateBtns = dateFilterList.querySelectorAll('.date__btn')
+
+      if (dateBtn.classList.contains('date-activated')) {
+        document.querySelector('.date-filter__wrapper').classList.toggle('display')
+        allDateBtns.forEach((btn) => btn.classList.remove('date-activated'))
+
+        const allMovieElements = document.querySelectorAll('.movie')
+        allMovieElements.forEach((movieElement) => {
+          movieElement.style.display = 'block'
+        })
+        dateBtn.classList.remove('date-activated')
+      } else {
+        allDateBtns.forEach((btn) => btn.classList.remove('date-activated'))
+        document.querySelector('.date-filter__wrapper').classList.toggle('display')
+        dateBtn.classList.add('date-activated')
+      }
+    })
+  })
+}
+
+function getOnlyDate(date) {
+  let theDay = date.slice(-2)
+  let theMonth = date.slice(5, 7)
+  let theMonthLetters = ''
+
+  if (theMonth == '01') {
+    theMonthLetters = 'Jan'
+  }
+  if (theMonth == '02') {
+    theMonthLetters = 'Feb'
+  }
+  if (theMonth == '03') {
+    theMonthLetters = 'Mars'
+  }
+  if (theMonth == '04') {
+    theMonthLetters = 'April'
+  }
+  if (theMonth == '05') {
+    theMonthLetters = 'Maj'
+  }
+  if (theMonth == '06') {
+    theMonthLetters = 'Juni'
+  }
+  if (theMonth == '07') {
+    theMonthLetters = 'Juli'
+  }
+  if (theMonth == '08') {
+    theMonthLetters = 'Aug'
+  }
+  if (theMonth == '09') {
+    theMonthLetters = 'Sep'
+  }
+  if (theMonth == '10') {
+    theMonthLetters = 'Okt'
+  }
+  if (theMonth == '11s') {
+    theMonthLetters = 'Nov'
+  }
+  if (theMonth == '12') {
+    theMonthLetters = 'Dec'
+  }
+
+  return `${theDay} ${theMonthLetters}`
+}
+
+updateDateFilter()
+setInterval(updateDateFilter, 24 * 60 * 60 * 1000)
+
+document.querySelector('.filter-btn--other').addEventListener('click', () => {
+  todayBtn.classList.remove('date-activated')
+  tomorrowBtn.classList.remove('date-activated')
+  document.querySelector('.date-filter__wrapper').classList.toggle('display')
+  const dateBtn = document.querySelector('.date-filter__list')
+  const existingCloseBtn = document.querySelector('.date__close-btn')
+
+  if (!existingCloseBtn) {
+    const dateTitle = document.createElement('h3')
+    dateTitle.classList.add('date__title')
+    dateTitle.innerHTML = 'Välj Datum'
+    dateBtn.insertBefore(dateTitle, dateBtn.children[0])
+
+    const closeBtn = document.createElement('span')
+    closeBtn.innerHTML = '\u00d7'
+    closeBtn.classList.add('date__close-btn')
+    dateBtn.insertBefore(closeBtn, dateBtn.children[0])
+
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.date-filter__wrapper').classList.toggle('display')
+    })
+  }
+})
+
+//TODAY & TOMORROW
+
+const todayBtn = document.querySelector('.filter-btn--today')
+const tomorrowBtn = document.querySelector('.filter-btn--tomorrow')
+
+todayBtn.addEventListener('click', () => {
+  if (!todayBtn.classList.contains('date-activated')) {
+    tomorrowBtn.classList.remove('date-activated')
+    todayBtn.classList.add('date-activated')
+
+    if (window.innerWidth <= 800) {
+      document.querySelector('.filter-btn__close-btn').click()
+    }
+  }
+})
+
+tomorrowBtn.addEventListener('click', () => {
+  if (!tomorrowBtn.classList.contains('date-activated')) {
+    todayBtn.classList.remove('date-activated')
+    tomorrowBtn.classList.add('date-activated')
+
+    if (window.innerWidth <= 800) {
+      document.querySelector('.filter-btn__close-btn').click()
+    }
+    const tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+  }
+})
