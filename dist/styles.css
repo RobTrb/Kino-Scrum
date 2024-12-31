@@ -15,7 +15,7 @@
 }
 
 .celebration-modal_content {
-  background-image: url("/assets/images/backgrounds/samisk.jpg");
+  background-image: url('/assets/images/backgrounds/samisk.jpg');
   background-size: cover;
   background-position: left;
   border: 5px solid #004b87;
@@ -48,7 +48,7 @@
 }
 
 .celebration-modal_content h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.2rem;
   min-width: 8rem;
   color: #2a1603;
@@ -73,7 +73,7 @@
 }
 
 .close-modal_btn::before {
-  content: "x";
+  content: 'x';
   font-size: 1.1em;
   color: #f43030;
 }
@@ -113,13 +113,25 @@
   }
   @keyframes glow {
     0% {
-      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
+      text-shadow:
+        0 0 5px #fba38d,
+        0 0 10px #fac0b1,
+        0 0 15px #ff7e5f,
+        0 0 20px #f9eee6;
     }
     50% {
-      text-shadow: 0 0 10px #fba38d, 0 0 20px #fac0b1, 0 0 30px #ff7e5f, 0 0 40px #f9eee6;
+      text-shadow:
+        0 0 10px #fba38d,
+        0 0 20px #fac0b1,
+        0 0 30px #ff7e5f,
+        0 0 40px #f9eee6;
     }
     100% {
-      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
+      text-shadow:
+        0 0 5px #fba38d,
+        0 0 10px #fac0b1,
+        0 0 15px #ff7e5f,
+        0 0 20px #f9eee6;
     }
   }
 }
@@ -137,7 +149,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
 .footer__social-twitter img:hover {
   transform: scale(1.1);
@@ -152,7 +166,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
 .footer__social-instagram img:hover {
   transform: scale(1.1);
@@ -167,7 +183,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
 .footer__social-youtube img:hover {
   transform: scale(1.1);
@@ -182,7 +200,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
 .footer__social-linkedin img:hover {
   transform: scale(1.1);
@@ -242,6 +262,154 @@
 .header {
   padding: 0px 20px 0px 20px;
   background-color: #012840;
+}
+
+.mobile__filter-menu {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .mobile__filter-menu {
+    display: block;
+    margin: 15px auto 35px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #03658c;
+    background-color: transparent;
+    border-color: #03658c;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+  }
+  .mobile__filter-menu:hover {
+    color: #fff;
+    background-color: #03658c;
+  }
+}
+
+.filter-btn__container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 800px) {
+  .filter-btn__container {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    bottom: 50px;
+    background-color: white;
+    z-index: 1;
+    border-color: #03658c;
+    border-width: 3px;
+    border-style: solid;
+  }
+}
+
+.filter-btn {
+  background-color: #03658c;
+  border-radius: 5px;
+  padding: 10px 0px;
+  width: 90px;
+  color: white;
+  border: none;
+}
+@media only screen and (max-width: 800px) {
+  .filter-btn {
+    margin: 20px auto;
+    width: 250px;
+    padding: 30px 0px;
+    font-size: 35px;
+  }
+}
+
+.filter-btn__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 70px;
+  color: #03658c;
+}
+
+.date-filter__wrapper {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-filter__list {
+  z-index: 2;
+  position: fixed;
+  border-style: solid;
+  border-color: #03658c;
+  border-width: 5px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 2fr;
+  gap: 10px;
+  padding: 45px 13px 0px;
+  max-width: 600px;
+  top: 200px;
+  right: 30%;
+  left: 30%;
+}
+
+@media only screen and (max-width: 800px) {
+  .date-filter__list {
+    top: 20px;
+    left: 15px;
+    right: 15px;
+  }
+}
+.date__btn {
+  color: white;
+  background-color: #03658c;
+  padding: 15px;
+  max-height: 50px;
+  max-width: 120px;
+  border: none;
+  border-radius: 15px;
+}
+
+.date__btn:hover {
+  background-color: darkblue;
+}
+
+.date__btn:nth-child(15) {
+  grid-column: 2;
+}
+
+.date__title {
+  margin: 0px 0px 15px;
+  font-size: 40px;
+  text-align: center;
+  grid-row: 1;
+  grid-column: span 4;
+}
+
+.date__close-btn {
+  font-size: 70px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #03658c;
+}
+
+.date__close-btn:hover {
+  color: darkblue;
+}
+
+.date-activated {
+  background-color: darkblue;
+}
+
+.display {
+  display: block;
 }
 
 body {
