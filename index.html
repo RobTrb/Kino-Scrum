@@ -40,23 +40,25 @@
         </select>
       </div>
 
-      <div class="movie-cards__container"><!--This is only a placeholder for modal--></div>
-      <div class="movie-modal">
-        <div class="movie-modal__content">
-          <span class="movie-modal__close">X</span>
-          <img class="movie-details__image" src="imagePoster" alt="Movie Poster" />
-          <h2 class="movie-details__title"></h2>
-          <p class="movie-details__id"></p>
-          <p class="movie-details__runtime"></p>
-          <p class="movie-details__description"></p>
-          <p class="movie-details__genres"></p>
-        </div>
-      </div>
-
       <div class="movie__wrapper"></div>
       <div class="filter-btn__container">
         <button class="filter-btn__show-less" type="button"></button>
         <button class="filter-btn__show-all" type="button"></button>
+      </div>
+
+      <div class="movie-modal__container" style="display: none">
+        <!--This is a section of placeholders for dynamic content-->
+        <div class="movie-modal__content">
+          <span class="movie-modal__close">X</span>
+          <div class="movie-details">
+            <img class="movie-details__image" />
+            <h2 class="movie-details__title"></h2>
+            <p class="movie-details__id"></p>
+            <p class="movie-details__runtime"></p>
+            <p class="movie-details__description"></p>
+            <p class="movie-details__genres"></p>
+          </div>
+        </div>
       </div>
     </main>
 
