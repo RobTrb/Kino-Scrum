@@ -1,0 +1,149 @@
+.mobile__filter-menu {
+  display: none;
+  @media only screen and (max-width: 800px) {
+    display: block;
+    margin: 15px auto 35px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #03658c;
+    background-color: transparent;
+    border-color: #03658c;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+
+    &:hover {
+      color: #fff;
+      background-color: #03658c;
+    }
+  }
+}
+
+.filter-btn__container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  margin-bottom: 30px;
+
+  @media only screen and (max-width: 800px) {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    bottom: 50px;
+    background-color: white;
+    z-index: 1;
+    border-color: #03658c;
+    border-width: 3px;
+    border-style: solid;
+  }
+}
+
+.filter-btn {
+  background-color: #03658c;
+  border-radius: 5px;
+  padding: 10px 0px;
+  width: 90px;
+  color: white;
+  border: none;
+
+  @media only screen and (max-width: 800px) {
+    margin: 20px auto;
+    width: 250px;
+    padding: 30px 0px;
+    font-size: 35px;
+  }
+}
+
+.filter-btn__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 70px;
+  color: #03658c;
+}
+
+//DATE POPUP
+
+.date-filter__wrapper {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-filter__list {
+  z-index: 2;
+  position: fixed;
+  border-style: solid;
+  border-color: #03658c;
+  border-width: 5px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 2fr;
+  gap: 10px;
+  padding: 45px 13px 0px;
+  max-width: 600px;
+  top: 200px;
+  right: 30%;
+  left: 30%;
+}
+
+@media only screen and (max-width: 800px) {
+  .date-filter__list {
+    top: 20px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+.date__btn {
+  color: white;
+  background-color: #03658c;
+  padding: 15px;
+  max-height: 50px;
+  max-width: 120px;
+  border: none;
+  border-radius: 15px;
+}
+
+.date__btn:hover {
+  background-color: darkblue;
+}
+
+.date__btn:nth-child(15) {
+  grid-column: 2;
+}
+
+.date__title {
+  margin: 0px 0px 15px;
+  font-size: 40px;
+  text-align: center;
+  grid-row: 1;
+  grid-column: span 4;
+}
+
+.date__close-btn {
+  font-size: 70px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #03658c;
+}
+
+.date__close-btn:hover {
+  color: darkblue;
+}
+
+//ADD ONS
+
+.date-activated {
+  background-color: darkblue;
+}
+
+.display {
+  display: block;
+}
