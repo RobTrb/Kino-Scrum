@@ -12,6 +12,11 @@
     "btnTomorrow": "Imorgon",
     "btnOther": "Annan dag",
     "dropdownGenreAll": "Alla Genre",
+    "dropdownGenreComedy": "Komedi",
+    "dropdownGenreRomance": "Romantik",
+    "dropdownGenreAction": "Action",
+    "dropdownGenreHorror": "Skräck",
+    "dropdownGenreKids": "Barn",
     "btnShowLess": "Show Less",
     "btnShowAll": "Show All"
   },
