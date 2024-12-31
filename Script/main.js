@@ -54,6 +54,11 @@ async function addFrontPageContent() {
   document.querySelector('.filter-btn--tomorrow').innerHTML = frontPageContent.main.btnTomorrow
   document.querySelector('.filter-btn--other').innerHTML = frontPageContent.main.btnOther
   document.querySelector('.filter-genre__dropdown-all').innerHTML = frontPageContent.main.dropdownGenreAll
+  document.querySelector('.filter-genre__dropdown-horror').innerHTML = frontPageContent.main.dropdownGenreHorror
+  document.querySelector('.filter-genre__dropdown-comedy').innerHTML = frontPageContent.main.dropdownGenreComedy
+  document.querySelector('.filter-genre__dropdown-action').innerHTML = frontPageContent.main.dropdownGenreAction
+  document.querySelector('.filter-genre__dropdown-romance').innerHTML = frontPageContent.main.dropdownGenreRomance
+  document.querySelector('.filter-genre__dropdown-kids').innerHTML = frontPageContent.main.dropdownGenreKids
   document.querySelector('.filter-btn__show-less').innerHTML = frontPageContent.main.btnShowLess
   document.querySelector('.filter-btn__show-all').innerHTML = frontPageContent.main.btnShowAll
 
