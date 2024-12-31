@@ -258,6 +258,16 @@ h2 {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.header__nav-list li {
+  list-style: none;
+  padding: 7px;
+  background-color: #03658c;
+  border-radius: 5px;
+}
+.header__nav-list li:hover {
+  background-color: #52b3d9;
+  color: black;
+}
 
 .header {
   padding: 0px 20px 0px 20px;
