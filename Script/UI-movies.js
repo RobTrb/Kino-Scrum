@@ -72,10 +72,10 @@ function showModal(movieData) {
 
   //modal content
   const modalContent = `
-    <div class="modal">
-      <button class="modal__close">×</button>
+    <div>
+      <button class="movie-modal__close">×</button>
       <h2>${movieData.title}</h2>
-      <img src="${movieData.imagePoster}" alt="${movieData.title}" class="modal__poster">
+      <img src="${movieData.imagePoster}" alt="${movieData.title}" class="movie-modal__poster">
       <p><strong>Age Limit:</strong> ${movieData.ageLimit}</p>
       <p><strong>Genres:</strong> ${movieData.genres.join(' / ')}</p>
       <p><strong>Description:</strong> ${movieData.description || 'No description available.'}</p>
@@ -85,7 +85,7 @@ function showModal(movieData) {
   modalContainer.classList.add('active')
 
   // Closing modal function
-  document.querySelector('.modal__close').addEventListener('click', () => {
+  document.querySelector('.movie-modal__close').addEventListener('click', () => {
     modalContainer.classList.remove('active')
   })
 }
