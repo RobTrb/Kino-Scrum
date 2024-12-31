@@ -63,14 +63,20 @@ async function addFrontPageContent() {
   document.querySelector('.footer__find-Us-title').innerHTML = frontPageContent.footer.findUsTitle
   document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
 }
-
-// Clear search field button
+// Eventlistener for search input
 document.addEventListener('DOMContentLoaded', () => {
+  initMovies()
   const searchInput = document.querySelector('.search__input')
+  searchInput.addEventListener('input', (L) => {
+    executeSearch(L.target.value)
+  })
+
+  // Clear search field button
   const clearButton = document.querySelector('.search__clear')
 
   clearButton.addEventListener('click', function () {
     searchInput.value = ''
     searchInput.focus()
+    createMovies()
   })
 })
