@@ -49,9 +49,10 @@ async function addFrontPageContent() {
   document.querySelector('.search__label').innerHTML = frontPageContent.main.searchLabel
   document.querySelector('.search__input').setAttribute('placeholder', frontPageContent.main.searchInput)
   document.querySelector('.search__clear').innerHTML = frontPageContent.main.searchClear
-  document.querySelector('.filter-btn__today').innerHTML = frontPageContent.main.btnToday
-  document.querySelector('.filter-btn__tomorrow').innerHTML = frontPageContent.main.btnTomorrow
-  document.querySelector('.filter-btn__other').innerHTML = frontPageContent.main.btnOther
+  document.querySelector('.mobile__filter-menu').innerHTML = frontPageContent.main.mobileFilterMenu
+  document.querySelector('.filter-btn--today').innerHTML = frontPageContent.main.btnToday
+  document.querySelector('.filter-btn--tomorrow').innerHTML = frontPageContent.main.btnTomorrow
+  document.querySelector('.filter-btn--other').innerHTML = frontPageContent.main.btnOther
   document.querySelector('.filter-genre__dropdown-all').innerHTML = frontPageContent.main.dropdownGenreAll
   document.querySelector('.filter-btn__show-less').innerHTML = frontPageContent.main.btnShowLess
   document.querySelector('.filter-btn__show-all').innerHTML = frontPageContent.main.btnShowAll
