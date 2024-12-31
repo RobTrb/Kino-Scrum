@@ -60,7 +60,14 @@ async function addFrontPageContent() {
   //FOOTER
   document.querySelector('.footer__social-title').innerHTML = frontPageContent.footer.socialTitle
   document.querySelector('.footer__contact-title').innerHTML = frontPageContent.footer.contactTitle
+  document.querySelector('.footer__contact-info').innerHTML = frontPageContent.footer.contactInfo
+  document.querySelector('.footer__contact-number').innerHTML = frontPageContent.footer.contactNumber
+  document.querySelector('.footer__contact-mail1').innerHTML = frontPageContent.footer.contactMail1
+  document.querySelector('.footer__contact-mail2').innerHTML = frontPageContent.footer.contactMail2
   document.querySelector('.footer__find-Us-title').innerHTML = frontPageContent.footer.findUsTitle
+  document.querySelector('.footer__find-Us-streetname').innerHTML = frontPageContent.footer.findUsStreetName
+  document.querySelector('.footer__find-Us-postalcode').innerHTML = frontPageContent.footer.findUsPostalCode
+  document.querySelector('.footer__find-Us-country').innerHTML = frontPageContent.footer.findUsCountry
   document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
 }
 // Eventlistener for search input

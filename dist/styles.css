@@ -137,8 +137,21 @@ h2 {
 }
 .footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
   padding: 20px;
+}
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.footer__social {
+  display: inline-block;
+  justify-content: center;
+  padding: 5px 15px 5px 15px;
 }
 .footer__social-twitter {
   display: inline-block;
@@ -208,33 +221,39 @@ h2 {
   transform: scale(1.1);
   opacity: 0.8;
 }
+.footer__contact {
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+}
 .footer__contact-info {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-number {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-mail1 {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-mail2 {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
+}
+.footer__find-Us {
+  padding: 5px 15px 5px 15px;
 }
 .footer__find-Us-streetname {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__find-Us-postalcode {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__find-Us-country {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
+}
+.footer__partners {
+  padding: 5px 15px 5px 15px;
 }
 
 .header__logo {
@@ -424,6 +443,7 @@ h2 {
 
 body {
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -441,6 +461,7 @@ footer {
 main {
   color: #000000;
   background-color: #ffffff;
+  padding: 0px 20px 0px 20px;
 }
 
 footer {

@@ -5,6 +5,7 @@
 
 body {
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -22,6 +23,7 @@ footer {
 main {
   color: #000000;
   background-color: #ffffff;
+  padding: 0px 20px 0px 20px;
 }
 
 footer {
