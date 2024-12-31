@@ -49,9 +49,10 @@ async function addFrontPageContent() {
   document.querySelector('.search__label').innerHTML = frontPageContent.main.searchLabel
   document.querySelector('.search__input').setAttribute('placeholder', frontPageContent.main.searchInput)
   document.querySelector('.search__clear').innerHTML = frontPageContent.main.searchClear
-  document.querySelector('.filter-btn__today').innerHTML = frontPageContent.main.btnToday
-  document.querySelector('.filter-btn__tomorrow').innerHTML = frontPageContent.main.btnTomorrow
-  document.querySelector('.filter-btn__other').innerHTML = frontPageContent.main.btnOther
+  document.querySelector('.mobile__filter-menu').innerHTML = frontPageContent.main.mobileFilterMenu
+  document.querySelector('.filter-btn--today').innerHTML = frontPageContent.main.btnToday
+  document.querySelector('.filter-btn--tomorrow').innerHTML = frontPageContent.main.btnTomorrow
+  document.querySelector('.filter-btn--other').innerHTML = frontPageContent.main.btnOther
   document.querySelector('.filter-genre__dropdown-all').innerHTML = frontPageContent.main.dropdownGenreAll
   document.querySelector('.filter-btn__show-less').innerHTML = frontPageContent.main.btnShowLess
   document.querySelector('.filter-btn__show-all').innerHTML = frontPageContent.main.btnShowAll
@@ -69,14 +70,20 @@ async function addFrontPageContent() {
   document.querySelector('.footer__find-Us-country').innerHTML = frontPageContent.footer.findUsCountry
   document.querySelector('.footer__partners-title').innerHTML = frontPageContent.footer.partnersTitle
 }
-
-// Clear search field button
+// Eventlistener for search input
 document.addEventListener('DOMContentLoaded', () => {
+  initMovies()
   const searchInput = document.querySelector('.search__input')
+  searchInput.addEventListener('input', (L) => {
+    executeSearch(L.target.value)
+  })
+
+  // Clear search field button
   const clearButton = document.querySelector('.search__clear')
 
   clearButton.addEventListener('click', function () {
     searchInput.value = ''
     searchInput.focus()
+    createMovies()
   })
 })
