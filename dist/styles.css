@@ -265,7 +265,8 @@ h2 {
   border-radius: 5px;
 }
 .header__nav-list li:hover {
-  background-color: aqua;
+  background-color: #52b3d9;
+  color: black;
 }
 
 .header {
