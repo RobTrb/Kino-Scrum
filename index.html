@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Kino Kvikkjokk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/dist/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
   </head>
   <body>
@@ -41,6 +41,11 @@
       <div class="filter-genre__container">
         <select class="filter-genre__dropdown">
           <option class="filter-genre__dropdown-all"></option>
+          <option class="filter-genre__dropdown-romance"></option>
+          <option class="filter-genre__dropdown-action"></option>
+          <option class="filter-genre__dropdown-horror"></option>
+          <option class="filter-genre__dropdown-kids"></option>
+          <option class="filter-genre__dropdown-comedy"></option>
         </select>
       </div>
 
@@ -66,7 +71,7 @@
       </div>
     </main>
 
-    <div class="celebration-modal_rootcontainer"><<!--This is only a placeholder for modal--></div>
+    <div class="celebration-modal_rootcontainer"><!--This is only a placeholder for modal--></div>
 
     <footer class="footer">
       <div class="footer__social">
@@ -101,9 +106,11 @@
         <h3 class="footer__partners-title"></h3>
       </div>
     </footer>
+
     <script src="/Script/main.js"></script>
     <script src="/Script/fetch.js"></script>
     <script src="/Script/celebration-modal.js"></script>
+
     <script src="Script/UI-movies.js"></script>
     <script src="Script/filter.js"></script>
     <script src="Script/UI-dateFilter.js"></script>
