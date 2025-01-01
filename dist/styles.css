@@ -557,8 +557,16 @@ footer {
   display: flex;
 }
 
-.body-barnbio {
-  background-image: url('assets/images/backgrounds/balloons.png');
+body {
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+  opacity: 1;
   background-size: cover;
+  background-position: center;
+}
+
+body.barn-bio {
+  transform: scale(1.05); /* Slight zoom effect */
 }
 /*# sourceMappingURL=styles.css.map */
