@@ -486,6 +486,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  transition: background-image 1s ease-in-out;
 }
 
 header,
