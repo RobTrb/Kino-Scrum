@@ -557,4 +557,8 @@ footer {
   display: flex;
 }
 
+.body-barnbio {
+  background-image: url('assets/images/backgrounds/balloons.png');
+  background-size: cover;
+}
 /*# sourceMappingURL=styles.css.map */
