@@ -15,11 +15,11 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"></li>
-          <li class="header__nav-item"></li>
-          <li class="header__nav-item"></li>
-          <li class="header__nav-item"></li>
-          <li class="header__nav-item"></li>
+          <li class="header__nav-item" id="header__menu"></li>
+          <li class="header__nav-item" id="header__children-movies"></li>
+          <li class="header__nav-item" id="header__events"></li>
+          <li class="header__nav-item" id="header__about-us"></li>
+          <li class="header__nav-item" id="header__login"></li>
         </ul>
       </nav>
     </header>
@@ -48,10 +48,26 @@
           <option class="filter-genre__dropdown-comedy"></option>
         </select>
       </div>
+
       <div class="movie__wrapper"></div>
       <div class="filter-btn__container">
         <button class="filter-btn__show-less" type="button"></button>
         <button class="filter-btn__show-all" type="button"></button>
+      </div>
+
+      <div class="movie-modal__container">
+        <!--This is a section of placeholders for dynamic content-->
+        <div class="movie-modal__content">
+          <span class="movie-modal__close">X</span>
+          <div class="movie-details">
+            <img class="movie-details__image" />
+            <h2 class="movie-details__title"></h2>
+            <p class="movie-details__id"></p>
+            <p class="movie-details__runtime"></p>
+            <p class="movie-details__description"></p>
+            <p class="movie-details__genres"></p>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -90,10 +106,14 @@
         <h3 class="footer__partners-title"></h3>
       </div>
     </footer>
-    <script src="Script/main.js"></script>
-    <script src="Script/fetch.js"></script>
-    <script src="Script/celebration-modal.js"></script>
+
+    <script src="/Script/main.js"></script>
+    <script src="/Script/fetch.js"></script>
+    <script src="/Script/celebration-modal.js"></script>
+
     <script src="Script/UI-movies.js"></script>
+    <script src="Script/filter.js"></script>
     <script src="Script/UI-dateFilter.js"></script>
+    <script src="/Script/moviecards-modal.js"></script>
   </body>
 </html>

@@ -1,7 +1,20 @@
 .footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
   padding: 20px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__social {
+    display: inline-block;
+    justify-content: center;
+    padding: 5px 15px 5px 15px;
+  }
 
   &__social-twitter {
     display: inline-block;
@@ -82,39 +95,47 @@
       }
     }
   }
+  &__contact {
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+  }
 
   &__contact-info {
     padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
   }
 
   &__contact-number {
     padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
   }
 
   &__contact-mail1 {
     padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
   }
 
   &__contact-mail2 {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+
+  &__find-Us {
+    padding: 5px 15px 5px 15px;
   }
 
   &__find-Us-streetname {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
   }
 
   &__find-Us-postalcode {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
   }
 
   &__find-Us-country {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+
+  &__partners {
+    padding: 5px 15px 5px 15px;
   }
 }

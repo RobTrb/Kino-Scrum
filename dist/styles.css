@@ -39,7 +39,7 @@
   font-size: small;
 }
 
-p {
+.celebration-modal_content p {
   background-color: #cbcdcd;
   margin-top: 2em;
   padding: 0.2em;
@@ -47,7 +47,7 @@ p {
   border-radius: 0.4rem;
 }
 
-h2 {
+.celebration-modal_content h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 1.2rem;
   min-width: 8rem;
@@ -137,8 +137,21 @@ h2 {
 }
 .footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
   padding: 20px;
+}
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.footer__social {
+  display: inline-block;
+  justify-content: center;
+  padding: 5px 15px 5px 15px;
 }
 .footer__social-twitter {
   display: inline-block;
@@ -208,33 +221,39 @@ h2 {
   transform: scale(1.1);
   opacity: 0.8;
 }
+.footer__contact {
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+}
 .footer__contact-info {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-number {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-mail1 {
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__contact-mail2 {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
+}
+.footer__find-Us {
+  padding: 5px 15px 5px 15px;
 }
 .footer__find-Us-streetname {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__find-Us-postalcode {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
 }
 .footer__find-Us-country {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 5px 0 5px 0;
+}
+.footer__partners {
+  padding: 5px 15px 5px 15px;
 }
 
 .header__logo {
@@ -257,6 +276,16 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.header__nav-list li {
+  list-style: none;
+  padding: 7px;
+  background-color: #03658c;
+  border-radius: 5px;
+}
+.header__nav-list li:hover {
+  background-color: #52b3d9;
+  color: black;
 }
 
 .header {
@@ -412,8 +441,49 @@ h2 {
   display: block;
 }
 
+/* Modal container */
+.movie-modal__container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.movie-modal__container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal styling */
+.movie-modal__content {
+  background-color: orange;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* close modal btn */
+.movie-modal__close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 body {
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
 }
@@ -431,6 +501,7 @@ footer {
 main {
   color: #000000;
   background-color: #ffffff;
+  padding: 0px 20px 0px 20px;
 }
 
 footer {
