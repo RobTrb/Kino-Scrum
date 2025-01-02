@@ -76,9 +76,10 @@ function showModal(movieData) {
       <button class="movie-modal__close">×</button>
       <h2 class= "movie-modal__title">${movieData.title}</h2>
       <img src="${movieData.imagePoster}" alt="${movieData.title}" class="movie-modal__poster">
-      <p class= "movie-modal__age">${movieData.ageLimit}</p>
+      <p class="movie-modal__runtime">${movieData.runtime}</p>
       <p class= "movie-modal__genres"> ${movieData.genres.join(' / ')}</p>
-      <p class= "movie-modal__description"> ${movieData.description || 'No description available.'}</p>
+      <div class="movie-modal__description-container">
+      <p class= "movie-modal__description"> ${movieData.description || 'No description available.'}</p></div>
     </div>
   `
   modalContainer.innerHTML = modalContent
