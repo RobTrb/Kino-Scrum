@@ -2,13 +2,10 @@
 
 /* Modal container */
 .movie-modal__container {
+  background-color: rgba(11, 11, 11, 0.779);
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 3vh 20vw; /* Skapa en större ram runt modalen (5% av skärmens bredd/höjd) */
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -16,26 +13,56 @@
 
 .movie-modal__container.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Modal styling */
-.movie-modal__content {
-  background-color: orange;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
 }
 
 /* close modal btn */
 .movie-modal__close {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 2.5rem;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.2em;
+  right: 0.2em;
+  color: rgb(197, 74, 74);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smidig övergång */
+}
+
+.movie-modal__close:hover {
+  transform: scale(0.8); /* Gör knappen större */
+  box-shadow: 0 0 10px 4px rgba(221, 104, 104, 0.6); /* Lägger till en ljus skugga */
+  border-radius: 30px;
+}
+
+.movie-modal__poster {
+  width: 100%; /* Gör bilden fullbredd inom sin container */
+  max-width: 20rem;
+  float: right;
+}
+
+.movie-modal__title {
+  margin-top: -10rem;
+  font-size: 2rem;
+  background-color: orange;
+}
+
+p {
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  margin-bottom: 1rem; /* Lägger till luft mellan rubrik och text */
+}
+
+.movie-modal__age {
+  background-color: green;
+}
+
+.movie-modal__description {
+  background-color: pink;
+}
+
+.movie-modal__genres {
+  background-color: grey;
 }

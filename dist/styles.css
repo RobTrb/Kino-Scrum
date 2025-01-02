@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .celebration-modal_rootcontainer {
   position: fixed;
   top: 0;
@@ -15,7 +16,7 @@
 }
 
 .celebration-modal_content {
-  background-image: url('/assets/images/backgrounds/samisk.jpg');
+  background-image: url("/assets/images/backgrounds/samisk.jpg");
   background-size: cover;
   background-position: left;
   border: 5px solid #004b87;
@@ -48,7 +49,7 @@
 }
 
 .celebration-modal_content h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 1.2rem;
   min-width: 8rem;
   color: #2a1603;
@@ -73,7 +74,7 @@
 }
 
 .close-modal_btn::before {
-  content: 'x';
+  content: "x";
   font-size: 1.1em;
   color: #f43030;
 }
@@ -113,25 +114,13 @@
   }
   @keyframes glow {
     0% {
-      text-shadow:
-        0 0 5px #fba38d,
-        0 0 10px #fac0b1,
-        0 0 15px #ff7e5f,
-        0 0 20px #f9eee6;
+      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
     }
     50% {
-      text-shadow:
-        0 0 10px #fba38d,
-        0 0 20px #fac0b1,
-        0 0 30px #ff7e5f,
-        0 0 40px #f9eee6;
+      text-shadow: 0 0 10px #fba38d, 0 0 20px #fac0b1, 0 0 30px #ff7e5f, 0 0 40px #f9eee6;
     }
     100% {
-      text-shadow:
-        0 0 5px #fba38d,
-        0 0 10px #fac0b1,
-        0 0 15px #ff7e5f,
-        0 0 20px #f9eee6;
+      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
     }
   }
 }
@@ -162,9 +151,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-twitter img:hover {
   transform: scale(1.1);
@@ -179,9 +166,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-instagram img:hover {
   transform: scale(1.1);
@@ -196,9 +181,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-youtube img:hover {
   transform: scale(1.1);
@@ -213,9 +196,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-linkedin img:hover {
   transform: scale(1.1);
@@ -443,13 +424,10 @@
 
 /* Modal container */
 .movie-modal__container {
+  background-color: rgba(11, 11, 11, 0.779);
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 3vh 20vw; /* Skapa en större ram runt modalen (5% av skärmens bredd/höjd) */
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -457,28 +435,56 @@
 
 .movie-modal__container.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Modal styling */
-.movie-modal__content {
-  background-color: orange;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
 }
 
 /* close modal btn */
 .movie-modal__close {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 2.5rem;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.2em;
+  right: 0.2em;
+  color: rgb(197, 74, 74);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smidig övergång */
+}
+
+.movie-modal__close:hover {
+  transform: scale(0.8); /* Gör knappen större */
+  box-shadow: 0 0 10px 4px rgba(221, 104, 104, 0.6); /* Lägger till en ljus skugga */
+  border-radius: 30px;
+}
+
+.movie-modal__poster {
+  width: 100%; /* Gör bilden fullbredd inom sin container */
+  max-width: 20rem;
+  float: right;
+}
+
+.movie-modal__title {
+  margin-top: -10rem;
+  font-size: 2rem;
+  background-color: orange;
+}
+
+p {
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  margin-bottom: 1rem; /* Lägger till luft mellan rubrik och text */
+}
+
+.movie-modal__age {
+  background-color: green;
+}
+
+.movie-modal__description {
+  background-color: pink;
+}
+
+.movie-modal__genres {
+  background-color: grey;
 }
 
 body {
@@ -557,8 +563,4 @@ footer {
   display: flex;
 }
 
-.body-barnbio {
-  background-image: url('assets/images/backgrounds/balloons.png');
-  background-size: cover;
-}
 /*# sourceMappingURL=styles.css.map */
