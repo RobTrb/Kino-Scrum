@@ -72,6 +72,7 @@ async function updateDateFilter() {
         allDateBtns.forEach((btn) => btn.classList.remove('date-activated'))
         document.querySelector('.date-filter__wrapper').classList.toggle('display')
         dateBtn.classList.add('date-activated')
+        dateFilter(date)
       }
     })
   })
@@ -160,6 +161,9 @@ todayBtn.addEventListener('click', () => {
     tomorrowBtn.classList.remove('date-activated')
     todayBtn.classList.add('date-activated')
 
+    const today = new Date()
+    dateFilter(formatDate(today))
+
     if (window.innerWidth <= 800) {
       document.querySelector('.filter-btn__close-btn').click()
     }
@@ -176,5 +180,33 @@ tomorrowBtn.addEventListener('click', () => {
     }
     const tomorrow = new Date()
     tomorrow.setDate(tomorrow.getDate() + 1)
+    dateFilter(formatDate(tomorrow))
   }
 })
+
+//FILTER FUNCTION
+
+async function dateFilter(date) {
+  const movies = await fetchAPI()
+
+  const filteredMovies = movies.filter((movie) => {
+    const startDate = new Date(movie.startDate)
+    const endDate = new Date(movie.endDate)
+    const selectedDate = new Date(date)
+
+    return selectedDate >= startDate && selectedDate <= endDate
+  })
+  console.log(filteredMovies)
+
+  const allMovieElements = document.querySelectorAll('.movie')
+  allMovieElements.forEach((movieElement) => {
+    movieElement.style.display = 'none'
+  })
+
+  filteredMovies.forEach((movie) => {
+    const movieElement = document.getElementById(movie.id)
+    if (movieElement) {
+      movieElement.style.display = 'block'
+    }
+  })
+}
