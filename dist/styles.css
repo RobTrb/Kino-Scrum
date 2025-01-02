@@ -15,7 +15,7 @@
 }
 
 .celebration-modal_content {
-  background-image: url('/assets/images/backgrounds/samisk.jpg');
+  background-image: url('assets/images/backgrounds/samisk.jpg');
   background-size: cover;
   background-position: left;
   border: 5px solid #004b87;
@@ -282,6 +282,7 @@
   padding: 7px;
   background-color: #03658c;
   border-radius: 5px;
+  user-select: none;
 }
 .header__nav-list li:hover {
   background-color: #52b3d9;
@@ -557,8 +558,4 @@ footer {
   display: flex;
 }
 
-.body-barnbio {
-  background-image: url('assets/images/backgrounds/balloons.png');
-  background-size: cover;
-}
 /*# sourceMappingURL=styles.css.map */
