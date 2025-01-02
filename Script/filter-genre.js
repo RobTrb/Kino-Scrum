@@ -1,14 +1,20 @@
-async function chooseGenre(){
-    const movies = await fetchAPI()
-    const genreChoice = valet i dropdown
+const genreDropdown = document.querySelector('.filter-genre__dropdown')
 
-    for(let i = 0; i < movies; i++){
-        if(genreChoice === movies[i].genres){
-            console.log(genreChoice)
-        }
-        else{
-            console.log("Tyvärr kan vi inte hitta det du söker efter")
-        }
+genreDropdown.addEventListener('click', async function () {
+  const movies = await fetchAPI()
+  const movieDiv = document.querySelectorAll('.movie')
+
+  for (let i = 0; i < movieDiv.length; i++) {
+    movieDiv[i].style.display = 'none'
+  }
+
+  for (let i = 0; i < movies.length; i++) {
+    if (!movies[i].genres.includes(genreDropdown.value) && genreDropdown.value !== 'all') {
+      movieDiv[i].style.display = 'none'
+    } 
+    else {
+      movieDiv[i].style.display = ''
     }
-    
-}
+  }
+})
+
