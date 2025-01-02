@@ -40,6 +40,7 @@
       </div>
       <div class="filter-genre__container">
         <select class="filter-genre__dropdown">
+
           <option value="all" class="filter-genre__dropdown-all"></option>
           <option value="Romance" class="filter-genre__dropdown-romance"></option>
           <option value="Action" class="filter-genre__dropdown-action"></option>
@@ -62,10 +63,36 @@
         </div>
       </div>
 
+
+          <option class="filter-genre__dropdown-all"></option>
+          <option class="filter-genre__dropdown-romance"></option>
+          <option class="filter-genre__dropdown-action"></option>
+          <option class="filter-genre__dropdown-horror"></option>
+          <option class="filter-genre__dropdown-kids"></option>
+          <option class="filter-genre__dropdown-comedy"></option>
+        </select>
+      </div>
+
+
       <div class="movie__wrapper"></div>
       <div class="filter-btn__container">
         <button class="filter-btn__show-less" type="button"></button>
         <button class="filter-btn__show-all" type="button"></button>
+      </div>
+
+      <div class="movie-modal__container">
+        <!--This is a section of placeholders for dynamic content-->
+        <div class="movie-modal__content">
+          <span class="movie-modal__close">X</span>
+          <div class="movie-details">
+            <img class="movie-details__image" />
+            <h2 class="movie-details__title"></h2>
+            <p class="movie-details__id"></p>
+            <p class="movie-details__runtime"></p>
+            <p class="movie-details__description"></p>
+            <p class="movie-details__genres"></p>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -110,6 +137,11 @@
     <script src="Script/UI-movies.js"></script>
     <script src="Script/filter.js"></script>
     <script src="Script/UI-dateFilter.js"></script>
+
     <script src="Script/filter-genre.js"></script>
+
+    <script src="Script/ReplaceBackgroundKidsCinema.js"></script>
+    <script src="Script/moviecards-modal.js"></script>
+
   </body>
 </html>
