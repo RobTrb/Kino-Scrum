@@ -79,9 +79,15 @@ async function addFrontPageContent() {
 document.addEventListener('DOMContentLoaded', () => {
   initMovies()
   const searchInput = document.querySelector('.search__input')
-  searchInput.addEventListener('input', (L) => {
-    executeSearch(L.target.value)
-  })
+  const debouncedSearch = debounce((query) => {
+    if (query.length >= 3) {
+      executeSearch(query)
+    } else if (query.length === 0) {
+      createMovies()
+    } else {
+      console.log('För kort sökfras')
+    }
+  }, 300) // 300ms delay
 
   // Clear search field button
   const clearButton = document.querySelector('.search__clear')
