@@ -1,6 +1,6 @@
 const genreDropdown = document.querySelector('.filter-genre__dropdown')
 
-genreDropdown.addEventListener('click', async function () {
+genreDropdown.addEventListener('change', async function () {
   const movies = await fetchAPI()
   const movieDiv = document.querySelectorAll('.movie')
 
