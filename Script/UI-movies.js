@@ -45,14 +45,10 @@ async function createMovies() {
       movieDOM.appendChild(movieGenres)
 
       //Listener when clicking on a movie
-
-      movieDOM.addEventListener('click', () => showModal(movieData))
-
       movieDOM.addEventListener('click', () => {
         console.log('Clicked movie:', movieData.title)
         showModal(movieData)
       })
-
     }
   } catch (error) {
     console.error('Error fetching or displaying movies:', error)
@@ -67,14 +63,6 @@ async function createMovies() {
 
 // Function to show modal
 function showModal(movieData) {
-
-  const modalContainer = document.querySelector('.movie-cards__container')
-  const modalContent = `
-    <div class="modal">
-      <button class="modal__close">×</button>
-      <h2>${movieData.title}</h2>
-      <img src="${movieData.imagePoster}" alt="${movieData.title}" class="modal__poster">
-
   const modalContainer = document.querySelector('.movie-modal__container')
 
   if (!modalContainer) {
@@ -88,25 +76,16 @@ function showModal(movieData) {
       <button class="movie-modal__close">×</button>
       <h2>${movieData.title}</h2>
       <img src="${movieData.imagePoster}" alt="${movieData.title}" class="movie-modal__poster">
-
       <p><strong>Age Limit:</strong> ${movieData.ageLimit}</p>
       <p><strong>Genres:</strong> ${movieData.genres.join(' / ')}</p>
       <p><strong>Description:</strong> ${movieData.description || 'No description available.'}</p>
     </div>
   `
   modalContainer.innerHTML = modalContent
-
-  modalContainer.style.display = 'block'
-
-  // Closing modal function
-  document.querySelector('.modal__close').addEventListener('click', () => {
-    modalContainer.style.display = 'none'
-
   modalContainer.classList.add('active')
 
   // Closing modal function
   document.querySelector('.movie-modal__close').addEventListener('click', () => {
     modalContainer.classList.remove('active')
-
   })
 }

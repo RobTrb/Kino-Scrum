@@ -1,13 +1,23 @@
 // Filtering logic for movie searching on frontpage
 let allMovies = []
 
+function debounce(func, delay) {
+  let timeout
+  return function (...args) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func.apply(this, args), delay)
+  }
+}
+
 async function initMovies() {
   const movies = await fetchAPI()
+  console.log('Hittade filmer:', movies)
   allMovies = movies
   createMovies()
 }
 
 function executeSearch(query) {
+  console.log('Sökta filmer:', query)
   const filteredResults = allMovies.filter((movie) => {
     const matchesQuery =
       movie.ageLimit.toLowerCase().includes(query.toLowerCase()) ||
@@ -15,7 +25,7 @@ function executeSearch(query) {
       movie.genres.some((genre) => genre.toLowerCase().includes(query.toLowerCase()))
     return matchesQuery
   })
-
+  console.log('Fil:', filteredResults)
   displaySearchResults(filteredResults)
 }
 
@@ -57,3 +67,15 @@ function displaySearchResults(filteredResults) {
     })
   }
 }
+
+// connecting debounce to searchfield
+const debouncedSearch = debounce((query) => executeSearch(query), 300)
+document.querySelector('.search__input').addEventListener('input', (e) => {
+  const query = e.target.value
+  if (query.length >= 3) {
+    debouncedSearch(query) // minimum 3
+  } else {
+    const movieContainer = document.querySelector('.movie__wrapper')
+    movieContainer.innerHTML = '' //Clearing results
+  }
+})
