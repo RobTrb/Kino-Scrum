@@ -15,7 +15,7 @@
 }
 
 .celebration-modal_content {
-  background-image: url('/assets/images/backgrounds/samisk.jpg');
+  background-image: url("/assets/images/backgrounds/samisk.jpg");
   background-size: cover;
   background-position: left;
   border: 5px solid #004b87;
@@ -48,10 +48,7 @@
 }
 
 .celebration-modal_content h2 {
-  font-family: 'Great Vibes', cursive;
-
-  font-family: 'Great Vibes', cursive;
-
+  font-family: "Great Vibes", cursive;
   font-size: 1.2rem;
   min-width: 8rem;
   color: #2a1603;
@@ -76,7 +73,7 @@
 }
 
 .close-modal_btn::before {
-  content: 'x';
+  content: "x";
   font-size: 1.1em;
   color: #f43030;
 }
@@ -116,25 +113,13 @@
   }
   @keyframes glow {
     0% {
-      text-shadow:
-        0 0 5px #fba38d,
-        0 0 10px #fac0b1,
-        0 0 15px #ff7e5f,
-        0 0 20px #f9eee6;
+      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
     }
     50% {
-      text-shadow:
-        0 0 10px #fba38d,
-        0 0 20px #fac0b1,
-        0 0 30px #ff7e5f,
-        0 0 40px #f9eee6;
+      text-shadow: 0 0 10px #fba38d, 0 0 20px #fac0b1, 0 0 30px #ff7e5f, 0 0 40px #f9eee6;
     }
     100% {
-      text-shadow:
-        0 0 5px #fba38d,
-        0 0 10px #fac0b1,
-        0 0 15px #ff7e5f,
-        0 0 20px #f9eee6;
+      text-shadow: 0 0 5px #fba38d, 0 0 10px #fac0b1, 0 0 15px #ff7e5f, 0 0 20px #f9eee6;
     }
   }
 }
@@ -165,9 +150,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-twitter img:hover {
   transform: scale(1.1);
@@ -182,9 +165,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-instagram img:hover {
   transform: scale(1.1);
@@ -199,9 +180,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-youtube img:hover {
   transform: scale(1.1);
@@ -216,9 +195,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .footer__social-linkedin img:hover {
   transform: scale(1.1);
@@ -445,92 +422,75 @@
   display: block;
 }
 
-/* Modal container */
+/* Modal container MOBILE FIRST*/
 .movie-modal__container {
-  background-color: rgba(11, 11, 11, 0.96);
   display: none;
+}
+
+.movie-modal__container.active {
+  display: block;
   position: fixed;
   inset: 3vh 20vw;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   border-radius: 10px;
-}
-
-.movie-modal__container.active {
-  display: flex;
+  background-color: #012840;
 }
 
 /* close modal btn */
 .movie-modal__close {
   background: none;
   border: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 0.5rem;
   cursor: pointer;
   position: absolute;
   top: 0.2em;
   right: 0.2em;
-  color: rgb(197, 74, 74);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  color: #594b02;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-modal__close:hover {
-  transform: scale(0.8);
+  transform: scale(1.2);
   box-shadow: 0 0 10px 4px rgba(221, 104, 104, 0.6);
-  border-radius: 30px;
+  border-radius: 1rem;
 }
 
 .movie-modal__poster {
-  width: 100%;
-  max-width: 20rem;
-  float: right;
-  margin-right: 4rem;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .movie-modal__title {
-  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: row;
   font-size: 2rem;
   color: white;
-  margin-left: 10rem;
-}
-
-p {
-  font-size: 1.2rem;
-  display: block;
-  text-align: center;
 }
 
 .movie-modal__runtime {
   font-size: 1rem;
   color: white;
   font-style: italic;
-  margin-left: -12rem;
 }
 
 .movie-modal__genres {
   font-size: 1rem;
   color: white;
   font-style: italic;
-  float: right;
-  margin-top: -2.2rem;
-  margin-right: 6rem;
 }
 
 .movie-modal__description-container {
   padding: 1rem;
-  background-color: rgba(22, 21, 20, 0.182);
+  background-color: #03658c;
   outline: auto;
   outline-color: rgba(234, 234, 234, 0);
   border-radius: 2px;
-  margin-top: 2rem;
   color: rgb(255, 255, 255);
   text-align: left;
-  max-width: 30%;
-  min-height: 20rem;
-  padding-bottom: 10rem;
-  margin-left: 8rem;
 }
 
 body {
@@ -610,85 +570,3 @@ footer {
 }
 
 /*# sourceMappingURL=styles.css.map */
-
-.movie__wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Style for individual movie cards */
-.movie {
-  background-color: #012840;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.movie__image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.movie__content {
-  padding: 15px;
-  text-align: center;
-}
-
-.movie__title {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-/* Additional movie details styling */
-.movie__runtime,
-.movie__description,
-.movie__genres {
-  font-size: 0.9rem;
-  color: #e0dfdf;
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-.movie__age-limit {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 0.9rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  opacity: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.movie:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .movie__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .movie__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}

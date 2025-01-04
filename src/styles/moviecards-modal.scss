@@ -1,126 +1,77 @@
 //this is styling for the movie card modals that appear when clicking a movie.
 
-.modal {
-  background-color: orange;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.movie-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: center;
-}
-
-.movie-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.movie-details__container {
-  padding: 2rem;
-  border: 1px solid #ddd;
-  margin-top: 2rem;
-  background-color: #f9f9f9;
-}
-
-/* Modal container */
+/* Modal container MOBILE FIRST*/
 .movie-modal__container {
-  background-color: rgba(11, 11, 11, 0.96);
   display: none;
+}
+
+.movie-modal__container.active {
+  display: block;
   position: fixed;
   inset: 3vh 20vw;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   border-radius: 10px;
-}
-
-.movie-modal__container.active {
-  display: flex;
+  background-color: #012840;
 }
 
 /* close modal btn */
 .movie-modal__close {
   background: none;
   border: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 0.5rem;
   cursor: pointer;
   position: absolute;
   top: 0.2em;
   right: 0.2em;
-  color: rgb(197, 74, 74);
+  color: #594b02;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .movie-modal__close:hover {
-  transform: scale(0.8);
+  transform: scale(1.2);
   box-shadow: 0 0 10px 4px rgba(221, 104, 104, 0.6);
-  border-radius: 30px;
+  border-radius: 1rem;
 }
 
 .movie-modal__poster {
-  width: 100%;
-  max-width: 20rem;
-  float: right;
-  margin-right: 4rem;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .movie-modal__title {
-  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: row;
   font-size: 2rem;
   color: white;
-  margin-left: 10rem;
-}
-
-p {
-  font-size: 1.2rem;
-  display: block;
-  text-align: center;
 }
 
 .movie-modal__runtime {
   font-size: 1rem;
   color: white;
   font-style: italic;
-  margin-left: -12rem;
 }
 
 .movie-modal__genres {
   font-size: 1rem;
   color: white;
   font-style: italic;
-  float: right;
-  margin-top: -2.2rem;
-  margin-right: 6rem;
 }
 
 .movie-modal__description-container {
   padding: 1rem;
-  background-color: rgba(22, 21, 20, 0.182);
+  background-color: #03658c;
   outline: auto;
   outline-color: rgba(234, 234, 234, 0);
   border-radius: 2px;
-  margin-top: 2rem;
   color: rgb(255, 255, 255);
   text-align: left;
-
-  max-width: 30%;
-  min-height: 20rem;
-  padding-bottom: 10rem;
-  margin-left: 8rem;
 }
 
 @media (max-width: 800px) {
-}
-
-@media (min-width: 799px) {
-}
+} //add more breakpoints for bigger screens
